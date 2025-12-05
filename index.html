@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- font -->
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font end -->
+    <!-- gsap -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+      integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+      integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- gsap end -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>포트폴리오</title>
+  </head>
+  <body>
+    <div id="cursor"></div>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">About Me</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+          <li>
+            <a href="#"
+              ><div class="head_cir">
+                <video
+                  src="img/wave.mp4"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                ></video></div
+            ></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="head_line">
+        <div></div>
+        <hr />
+      </div>
+    </header>
+    <div id="visual">
+      <h2><span>gayeon's</span><span>portfolio</span></h2>
+      <div class="vis_line">
+        <video src="img/wave.mp4" autoplay muted loop playsinline></video>
+      </div>
+      <div class="lines"><hr /></div>
+      <div class="lines"><hr /></div>
+      <div class="lines"><hr /></div>
+      <div class="lines"><hr /></div>
+      <div class="lines"><hr /></div>
+      <div class="lines"><hr /></div>
+      <div class="lines"><hr /></div>
+      <div class="cc v1">
+        <img src="img/colorcircle.svg" />
+      </div>
+      <div class="cc v2"><img src="img/colorcircle.svg" /></div>
+      <div class="cc v3"><img src="img/colorcircle.svg" /></div>
+      <div class="cc v4"><img src="img/colorcircle.svg" /></div>
+      <div class="cc v5"><img src="img/colorcircle.svg" /></div>
+
+      <div class="prtc1">
+        <img src="img/star.svg" />
+        <img src="img/star.svg" />
+        <img src="img/star.svg" />
+        <img src="img/triangle.svg" />
+        <img src="img/triangle.svg" />
+        <img src="img/triangle.svg" />
+        <img src="img/circle.svg" />
+        <img src="img/circle.svg" />
+        <img src="img/circle.svg" />
+      </div>
+    </div>
+    <h1>
+      <hr />
+      <a href="#"><img src="img/logo.svg" /></a>
+    </h1>
+    <div id="ppFrame">
+      <div class="frameSq1"></div>
+      <div>
+        <p>portfolio</p>
+        <hr />
+        <p>Web<br />Design & Publishing</p>
+      </div>
+      <div class="frameSq2"></div>
+    </div>
+    <div id="container">
+      <section class="con01">
+        <h6>about me</h6>
+        <div class="top">
+          <div>
+            <h3>안녕하세요, 저는</h3>
+            <ul>
+              <li>#공감</li>
+              <li>#소통</li>
+              <li>#학습</li>
+              <li>
+                <span>#빌드업 아티스트</span>를 꿈꾸는 개발자 권가연입니다.
+              </li>
+            </ul>
+            <div class="about">
+              <div class="btn">
+                <div>About</div>
+                <div></div>
+              </div>
+              <ul>
+                <li>권가연 / Gayeon Kwon</li>
+                <li>2002. 09. 09</li>
+                <li>
+                  고려대학교 세종캠퍼스<br />
+                  문화창의학부 문화콘텐츠전공 졸업
+                </li>
+                <li><span>Tel.</span>010-2878-8983</li>
+                <li><span>Email.</span>karisk0209@gmail.com</li>
+              </ul>
+            </div>
+          </div>
+          <div class="aboutMe">
+            <div class="pic"></div>
+            <div>
+              누구나 저마다의 예술을 선보일 수 있는 시대에서 사용자와 개발자
+              모두가 즐기고 감상할 수 있는 웹사이트를 제작합니다.<br />
+              편리하고 인상적인 UX/UI에 대해 늘 고민하면서 새롭게 접근하고,
+              어제보다 한 단계씩 나아간 빌드업<span>Build-Up</span>이 될 오늘을
+              보여드릴 수 있도록 늘 배우는 자세로 임하겠습니다.
+            </div>
+          </div>
+        </div>
+        <div class="skills">
+          <div class="btn">
+            <div>Skills</div>
+            <div></div>
+          </div>
+          <ul>
+            <li>
+              <ul class="deco">
+                <li><i class="fa-regular fa-window-minimize"></i></li>
+                <li><i class="fa-regular fa-window-maximize"></i></li>
+                <li><i class="fa-solid fa-xmark"></i></li>
+              </ul>
+              <div class="skill">
+                기본 HTML 태그와 CSS만으로 구성한 레이아웃 디자인이 가능합니다.
+              </div>
+            </li>
+            <li>
+              <ul class="deco">
+                <li><i class="fa-regular fa-window-minimize"></i></li>
+                <li><i class="fa-regular fa-window-maximize"></i></li>
+                <li><i class="fa-solid fa-xmark"></i></li>
+              </ul>
+              <div class="skill">
+                바닐라 자바스크립트를 이용한 간단한 프로그램 코딩이 가능합니다.
+              </div>
+            </li>
+            <li>
+              <ul class="deco">
+                <li><i class="fa-regular fa-window-minimize"></i></li>
+                <li><i class="fa-regular fa-window-maximize"></i></li>
+                <li><i class="fa-solid fa-xmark"></i></li>
+              </ul>
+              <div class="skill">
+                jQuery, GSAP 등 자바스크립트 플러그인을 이용한 다채로운 움직임을
+                구현할 수 있습니다.
+              </div>
+            </li>
+            <li>
+              <ul class="deco">
+                <li><i class="fa-regular fa-window-minimize"></i></li>
+                <li><i class="fa-regular fa-window-maximize"></i></li>
+                <li><i class="fa-solid fa-xmark"></i></li>
+              </ul>
+              <div class="skill">
+                Figma를 통한 협업 디자인과 효율적인 피드백 교환이 가능합니다.
+              </div>
+            </li>
+            <li>
+              <ul class="deco">
+                <li><i class="fa-regular fa-window-minimize"></i></li>
+                <li><i class="fa-regular fa-window-maximize"></i></li>
+                <li><i class="fa-solid fa-xmark"></i></li>
+              </ul>
+              <div class="skill">
+                Photoshop과 Illustrator 프로그램을 통해 직접 에셋을 제작할 수
+                있습니다.
+              </div>
+            </li>
+            <li>
+              <ul class="deco">
+                <li><i class="fa-regular fa-window-minimize"></i></li>
+                <li><i class="fa-regular fa-window-maximize"></i></li>
+                <li><i class="fa-solid fa-xmark"></i></li>
+              </ul>
+              <div class="skill">
+                Premiere Pro와 After Effect를 통해 영상물 제작 및 편집이
+                가능합니다.
+              </div>
+            </li>
+            <li>
+              <ul class="deco">
+                <li><i class="fa-regular fa-window-minimize"></i></li>
+                <li><i class="fa-regular fa-window-maximize"></i></li>
+                <li><i class="fa-solid fa-xmark"></i></li>
+              </ul>
+              <div class="skill">
+                Firebase를 이용한 게시판 데이터베이스 기록 및 수집이 가능합니다.
+              </div>
+            </li>
+            <li class="moveBar">
+              <ul>
+                <li class="on"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="con02">
+        <h6>archive</h6>
+        <ul class="timeBar">
+          <li>
+            <div></div>
+          </li>
+          <li>
+            <div></div>
+          </li>
+          <li>
+            <div></div>
+            <div></div>
+          </li>
+        </ul>
+        <div class="timeline">
+          <ul>
+            <li>
+              <span class="time"
+                >2023. 12<br />고려대학교 세종교육혁신원 교수학습지원센터
+                개최</span
+              >
+              스마트 APP 아이디어 공모전 대상
+              <hr />
+            </li>
+            <li>
+              <span class="time">2024. 12 ~ 2025. 12</span>
+              (주)디지털에볼루션 PR사업부 기간제 인턴 근무
+              <hr />
+            </li>
+            <li>
+              <span class="time">2025. 08</span>
+              고려대학교 세종캠퍼스 문화창의학부 문화콘텐츠전공 졸업
+              <hr />
+            </li>
+            <li>
+              <span class="time">2025. 06 ~ 2025. 12</span>
+              MBC컴퓨터아카데미 웹퍼블리셔 교육과정 수료
+              <hr />
+            </li>
+          </ul>
+          <div class="github">
+            <a href="#"
+              ><div></div>
+              View Github</a
+            >
+            <hr />
+          </div>
+        </div>
+      </section>
+      <section class="con03">
+        <h6>about logo</h6>
+      </section>
+      <section class="con04">
+        <h6>main<br />project</h6>
+        <div class="mainTime">
+          <p>2025. 12~</p>
+          <div class="mainCirc"></div>
+          <hr />
+          <p>2026. ~</p>
+        </div>
+        <div class="java">
+          <ul>
+            <li>
+              <h3>숫자 게임</h3>
+              <h5>2025. 11. 02 ~ 2025. 11. 09</h5>
+              <div>
+                <div class="left">
+                  <ul class="prg">
+                    <li><img src="img/html_logo.png" /></li>
+                    <li><img src="img/css_logo.png" /></li>
+                    <li><img src="img/js_logo.png" /></li>
+                    <li><img src="img/ai_logo.png" /></li>
+                    <li><img src="img/cp_logo.png" /></li>
+                    <li><img src="img/fg_logo.png" /></li>
+                  </ul>
+                  <p class="hashtag">
+                    <span>#HTML5</span>
+                    <span>#CSS</span>
+                    <span>#javascript</span>
+                    <span>#illustrator</span>
+                    <span>#ClipStudio</span>
+                    <span>#반응형</span>
+                  </p>
+                  <div class="line">
+                    <hr />
+                    <div></div>
+                  </div>
+                  <p>
+                    기본 htmlcss와 바닐라 자바스크립트를 이용한 코딩으로
+                    플래시게임의 UI를 모방하여 간단한 숫자 게임을 구현했습니다.
+                  </p>
+                </div>
+                <div class="right">
+                  <img src="https://placehold.co/400x300" />
+                </div>
+              </div>
+            </li>
+            <li>
+              <h3>To-Do 리스트</h3>
+              <h5>2025. 11. 02 ~ 2025. 11. 09</h5>
+              <div>
+                <div class="left">
+                  <ul class="prg">
+                    <li><img src="img/html_logo.png" /></li>
+                    <li><img src="img/css_logo.png" /></li>
+                    <li><img src="img/js_logo.png" /></li>
+                    <li><img src="img/ai_logo.png" /></li>
+                    <li><img src="img/cp_logo.png" /></li>
+                    <li><img src="img/fg_logo.png" /></li>
+                  </ul>
+                  <p class="hashtag">
+                    <span>#HTML5</span>
+                    <span>#CSS</span>
+                    <span>#javascript</span>
+                    <span>#illustrator</span>
+                    <span>#ClipStudio</span>
+                    <span>#반응형</span>
+                  </p>
+                  <div class="line">
+                    <hr />
+                    <div></div>
+                  </div>
+                  <p>
+                    자바스크립트를 이용하여 사용자의 입력값을 저장하고 별도로
+                    표기할 수 있는 기능이 담긴 투두 리스트 프로그램을
+                    제작하였습니다.
+                  </p>
+                </div>
+                <div class="right">
+                  <img src="https://placehold.co/400x300" />
+                </div>
+              </div>
+            </li>
+            <li>
+              <h3>날씨 정보 웹페이지</h3>
+              <h5>2025. 11. 02 ~ 2025. 11. 09</h5>
+              <div>
+                <div class="left">
+                  <ul class="prg">
+                    <li><img src="img/html_logo.png" /></li>
+                    <li><img src="img/css_logo.png" /></li>
+                    <li><img src="img/js_logo.png" /></li>
+                    <li><img src="img/ai_logo.png" /></li>
+                    <li><img src="img/cp_logo.png" /></li>
+                    <li><img src="img/fg_logo.png" /></li>
+                  </ul>
+                  <p class="hashtag">
+                    <span>#HTML5</span>
+                    <span>#CSS</span>
+                    <span>#javascript</span>
+                    <span>#illustrator</span>
+                    <span>#ClipStudio</span>
+                    <span>#반응형</span>
+                  </p>
+                  <div class="line">
+                    <hr />
+                    <div></div>
+                  </div>
+                  <p>
+                    OpenWeatherMap 사이트의 api를 사용하여 실시간으로 날씨
+                    정보를 각지에서 불러올 수 있는 날씨 앱 기능을 하는
+                    웹페이지를 구현하였습니다.
+                  </p>
+                </div>
+                <div class="right">
+                  <img src="https://placehold.co/400x300" />
+                </div>
+              </div>
+            </li>
+            <li>
+              <h3>영화 리스트 웹페이지</h3>
+              <h5>2025. 11. 02 ~ 2025. 11. 09</h5>
+              <div>
+                <div class="left">
+                  <ul class="prg">
+                    <li><img src="img/html_logo.png" /></li>
+                    <li><img src="img/css_logo.png" /></li>
+                    <li><img src="img/js_logo.png" /></li>
+                    <li><img src="img/ai_logo.png" /></li>
+                    <li><img src="img/cp_logo.png" /></li>
+                    <li><img src="img/fg_logo.png" /></li>
+                  </ul>
+                  <p class="hashtag">
+                    <span>#HTML5</span>
+                    <span>#CSS</span>
+                    <span>#javascript</span>
+                    <span>#illustrator</span>
+                    <span>#ClipStudio</span>
+                    <span>#반응형</span>
+                  </p>
+                  <div class="line">
+                    <hr />
+                    <div></div>
+                  </div>
+                  <p>
+                    TMDI 사이트의 api 코드를 통해 현재 개봉 중인 영화 및 많은
+                    사람들이 평가를 남긴 영화 등을 리스트 형태로 불러올 수 있는
+                    웹페이지입니다.
+                  </p>
+                </div>
+                <div class="right">
+                  <img src="https://placehold.co/400x300" />
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="con05">
+        <h6>main<br />project</h6>
+        <h2>group project</h2>
+        <div class="left">
+          <div class="numNow">
+            <ul>
+              <li><img src="img/sparkle_solid.svg" /></li>
+              <li><img src="img/sparkle_line.svg" /></li>
+              <li><img src="img/sparkle_line.svg" /></li>
+            </ul>
+            <div></div>
+          </div>
+          <div class="imgBox">
+            <img src="img/cheongwoo.png" />
+          </div>
+        </div>
+        <div class="right">
+          <ul>
+            <li>
+              <h3>청우식품 웹사이트 리뉴얼</h3>
+              <div>
+                <p class="prg">
+                  <span>#html</span>
+                  <span>#css</span>
+                  <span>#jquery</span>
+                  <span>#javascript</span>
+                  <span>#gsap</span>
+                </p>
+                <p class="type">
+                  <span>#반응형</span>
+                  <span>#추가css</span>
+                  <span>#코드최적화</span>
+                </p>
+              </div>
+              <div class="view">
+                <a href="#"
+                  >view code
+                  <div></div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <h3>청우식품 웹사이트 리뉴얼</h3>
+              <div>
+                <p class="prg">
+                  <span>#html</span>
+                  <span>#css</span>
+                  <span>#jquery</span>
+                  <span>#javascript</span>
+                  <span>#gsap</span>
+                </p>
+                <p class="type">
+                  <span>#반응형</span>
+                  <span>#추가css</span>
+                  <span>#코드최적화</span>
+                </p>
+              </div>
+              <div class="view">
+                <a href="#"
+                  >view code
+                  <div></div>
+                </a>
+              </div>
+            </li>
+            <li>
+              <h3>청우식품 웹사이트 리뉴얼</h3>
+              <div>
+                <p class="prg">
+                  <span>#html</span>
+                  <span>#css</span>
+                  <span>#jquery</span>
+                  <span>#javascript</span>
+                  <span>#gsap</span>
+                </p>
+                <p class="type">
+                  <span>#반응형</span>
+                  <span>#추가css</span>
+                  <span>#코드최적화</span>
+                </p>
+              </div>
+              <div class="view">
+                <a href="#"
+                  >view code
+                  <div></div>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="con06">
+        <h6>Sub<br />project</h6>
+        <div class="click">
+          <i class="fa-regular fa-hand-pointer"></i> click
+        </div>
+        <div class="clone">
+          <ul>
+            <li><img src="img/thePlatinum1.jpg" /></li>
+            <li class="on"><img src="img/thePlatinum2.jpg" /></li>
+            <li><img src="img/thePlatinum3.jpg" /></li>
+          </ul>
+          <div class="music">
+            <p>Now playing . . .</p>
+            <h3>the platinum</h3>
+            <div class="music_bar">
+              <p>00 : 00</p>
+              <div>
+                <hr />
+                <div></div>
+              </div>
+              <p>03 : 00</p>
+            </div>
+            <ul>
+              <li><i class="fa-solid fa-backward-step"></i></li>
+              <li><i class="fa-solid fa-pause"></i></li>
+              <li><i class="fa-solid fa-forward-step"></i></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="con07">
+        <h6>Sub<br />project</h6>
+      </section>
+      <section class="con08">
+        <h6>contact</h6>
+      </section>
+    </div>
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      let v1 = gsap.timeline();
+      v1.from(".vis_line", {
+        width: 0,
+        duration: 2,
+      })
+        .from("#visual h2 span", {
+          y: 50,
+          opacity: 0,
+          duration: 1.5,
+          stagger: 0.5,
+        })
+        .to(
+          "#visual h2 span:nth-child(1)",
+          {
+            x: "-25%",
+            duration: 1,
+          },
+          3.5
+        )
+        .to(
+          "#visual h2 span:nth-child(2)",
+          {
+            x: "23%",
+            duration: 1,
+          },
+          3.5
+        )
+        .to(
+          ".vis_line",
+          {
+            height: "400px",
+            duration: 1,
+          },
+          4.5
+        )
+        .to(
+          "#visual h2 span:nth-child(1)",
+          {
+            y: "-25vh",
+            duration: 1,
+          },
+          4.5
+        )
+        .to(
+          "#visual h2 span:nth-child(2)",
+          {
+            y: "25vh",
+            duration: 1,
+          },
+          4.5
+        );
+
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: "#visual",
+          start: "50% 50%",
+          end: "bottom top",
+          scrub: 2,
+          markers: true,
+        },
+      });
+    </script>
+  </body>
+</html>
