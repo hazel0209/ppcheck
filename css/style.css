@@ -125,6 +125,21 @@ hr {
   border: none;
   border-radius: 10px;
 }
+#visual .imgBox {
+  position: absolute;
+  left: 30%;
+  bottom: -12%;
+  /* transform: translate(20%, -50%); */
+  width: 10vw;
+  height: 80vh;
+  /* height: 50%; */
+  /* overflow: hidden; */
+  width: 0;
+}
+#visual .imgBox img {
+  width: 100%;
+  height: 100%;
+}
 #visual hr {
   width: 60vw;
   max-width: 400px;
@@ -345,11 +360,14 @@ h6 {
   width: 100%;
 }
 .con01 .top > div:nth-child(1) {
-  width: 50%;
-  max-width: 720px;
+  width: 60%;
 }
 .con01 .top > div:nth-child(2) {
   width: 40%;
+}
+.con01 .top > div:nth-child(1) .intro {
+  margin-left: auto;
+  max-width: 720px;
 }
 
 .con01 h3 {
@@ -364,7 +382,7 @@ h6 {
   line-height: 0.7;
 }
 .con01 h3 + ul span {
-  font-weight: bold;
+  font-weight: 800;
 }
 .con01 h3 + ul li:nth-child(1) {
   opacity: 0.2;
@@ -382,6 +400,7 @@ h6 {
 }
 
 .con01 .about {
+  width: 100%;
   display: flex;
   /* transform: translateX(-25%); */
   margin: 40px 0px;
@@ -422,6 +441,53 @@ h6 {
   display: flex;
   justify-content: space-between;
 }
+/* 말풍선 */
+.con01 .aboutMe .bubble1 {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #fffdf6;
+  border-radius: 2vw;
+  border: #000000 solid 2px;
+  z-index: -1;
+
+  line-height: 1.5;
+  word-break: keep-all;
+  text-align: right;
+  font-size: calc(10px + 0.5vw);
+}
+.con01 .aboutMe .bubble1 span {
+  opacity: 0.3;
+}
+
+.con01 .aboutMe .bubble1:after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 0 10px 20px;
+  border-color: #fffdf6 transparent;
+  display: block;
+  width: 0;
+  z-index: -1;
+  margin-left: -10px;
+  top: -20px;
+  left: 21%;
+}
+
+.con01 .aboutMe .bubble1:before {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 0 11px 21px;
+  border-color: #000000 transparent;
+  display: block;
+  width: 0;
+  z-index: -1;
+  margin-left: -11px;
+  top: -23px;
+  left: 21%;
+}
 
 .con01 .btn {
   display: flex;
@@ -461,15 +527,32 @@ h6 {
 .con01 .skills > ul > li {
   flex-shrink: 0;
   width: 20vw;
-  min-width: 300px;
+  min-width: 400px;
   border: 2px solid #000;
 }
 .con01 .skills .skill {
   box-sizing: border-box;
   padding: 10px;
+  height: 75px;
   align-content: center;
   word-break: keep-all;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+.con01 .skills .skill .imgBox {
+  display: flex;
+  width: 100px;
+}
+.con01 .skills .skill .imgBox img {
+  display: block;
+  width: 50px;
+  aspect-ratio: 1/1;
+}
+/* .con01 .skills .skill p {
+  width: calc(100% - 100px);
+} */
+
 .con01 .skills .deco {
   display: flex;
   justify-content: right;
@@ -580,6 +663,10 @@ h6 {
   height: 80px;
   border-radius: 100% 100% 0 100%;
   background-color: #000;
+  color: #fff;
+  text-align: center;
+  align-content: center;
+  font-size: 60px;
 }
 
 /* con03 */
@@ -713,6 +800,8 @@ h6 {
   height: 100%;
   object-fit: cover;
   border-radius: 0 40px 40px 40px;
+  box-shadow: 3px 3px 0px #000;
+  border: 1px solid #000;
 }
 
 /* con05 */
@@ -859,8 +948,43 @@ h6 {
   text-align: center;
 }
 .con06 .click {
-  font-size: 20px;
+  font-size: calc(13px + 1vw);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  animation: size 1.5s ease-in-out infinite;
 }
+.con06 .click i {
+  display: block;
+  transform: rotate(180deg);
+  margin-right: 10px;
+  font-size: calc(15px + 2vw);
+  animation: click 1.5s ease-in-out infinite;
+}
+@keyframes click {
+  0% {
+    transform: rotate(180deg) translateY(10px) scale(1.1);
+  }
+  50% {
+    transform: rotate(180deg) translateY(-10px) scale(1.2);
+  }
+  100% {
+    transform: rotate(180deg) translateY(10px) scale(1.1);
+  }
+}
+@keyframes size {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .con06 .clone > ul {
   display: flex;
   justify-content: center;
@@ -874,6 +998,7 @@ h6 {
   overflow: hidden;
   transform: scale(0.8);
 }
+/* .on에 따른 조정 */
 .con06 .clone > ul li.on {
   transform: scale(1);
 }
@@ -884,7 +1009,7 @@ h6 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: blur(2px) brightness(60%);
+  filter: blur(2px) brightness(60%) contrast(60%);
 }
 
 .con06 .music {
@@ -908,9 +1033,16 @@ h6 {
   justify-content: center;
   align-items: center;
 }
+.con06 .music ul {
+  gap: 5vw;
+}
 .con06 .music .music_bar {
-  margin: 10px 0px;
+  max-width: 800px;
+  margin: 16px auto 10px;
   font-size: 2vw;
+}
+.con06 .music .music_bar p {
+  flex-shrink: 0;
 }
 .con06 .music .music_bar > div {
   width: 40vw;
@@ -923,8 +1055,8 @@ h6 {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 2vw;
-  height: 2vw;
+  width: calc(10px + 1vw);
+  height: calc(10px + 1vw);
   background-color: #000;
   border-radius: 100%;
 }
@@ -936,8 +1068,162 @@ h6 {
 .con06 .music ul {
   font-size: calc(14px + 2vw);
 }
-.con06 .music ul li:nth-child(2) {
+/* li 순서에 따른 조정 */
+.con06 .clone > ul li:nth-child(1),
+.con06 .clone > ul li:nth-child(3) {
+  margin: 0px -20%;
+  box-shadow: 2px 2px 10px #00000070;
+}
+.con06 .clone > ul li:nth-child(2) {
   margin: 0px 5vw;
+  z-index: 5;
+  box-shadow: 0px 0px 16px #ffffff90;
 }
 
 /* con07 */
+.con07 {
+  background-color: #a200ff1c;
+  box-sizing: border-box;
+  padding: 0px 100px;
+  align-content: center;
+}
+.con07 h2 {
+  position: absolute;
+  left: 50%;
+  top: 7vh;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 70px;
+  letter-spacing: -5px;
+  font-weight: 900;
+  text-shadow: 3px 3px 0px #fff;
+}
+/* 이미지 클릭 시 모달창 */
+.con07 .modalBox {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1001;
+  width: 100%;
+  height: 100%;
+  background-color: #00000070;
+  backdrop-filter: blur(2px);
+
+  display: none;
+}
+.con07 .modalBox .modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 80vh;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background-image: linear-gradient(45deg, #ffffffa2, #ffffff18);
+}
+.con07 .modalBox .modal .close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 2vw;
+  color: #be0000;
+  text-shadow: 0px 0px 5px #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.con07 .modalBox .modal .close:hover {
+  transform: rotate(180deg) scale(1.2);
+  color: #ff2727;
+  text-shadow: 0px 0px 10px #ff9898;
+}
+
+/* 갤러리 */
+.con07 ul {
+  display: flex;
+  gap: 20px;
+}
+.con07 ul li {
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #000;
+  padding: 20px 20px 60px;
+}
+.con07 ul li.a {
+  transform: rotate(10deg);
+}
+.con07 ul li.b {
+  transform: rotate(-6deg);
+}
+.con07 ul li.c {
+  transform: rotate(3deg);
+}
+
+/* con08 */
+.con08 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.con08 .left {
+  width: 60%;
+}
+.con08 .left p {
+  font-size: calc(10px + 1.5vw);
+  word-break: keep-all;
+  margin: 10px 0px;
+}
+.con08 .left .mail + p,
+.con08 .left .mail + p + p {
+  font-size: calc(8px + 1vw);
+}
+.con08 .left .mail {
+  display: flex;
+  align-items: center;
+  margin: 8% 0px;
+}
+.con08 .left .mail > i {
+  font-size: calc(40px + 5vw);
+  display: block;
+  margin-right: 10px;
+}
+.con08 .left .mail a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #000;
+  transition: 0.8s;
+}
+.con08 .left .mail a {
+  display: inline-block;
+  position: relative;
+  align-content: center;
+  transition: 0.4s;
+}
+.con08 .left .mail a:hover::after {
+  width: 100%;
+}
+.con08 .left .mail a:hover {
+  transform: translateX(20px);
+}
+.con08 .left .mail a i {
+  font-size: 20px;
+  margin-right: 5px;
+}
+.con08 .left .mail span {
+  display: block;
+  font-size: calc(20px + 2vw);
+}
+.con08 .right {
+  width: 20%;
+  border: 1px solid #000;
+  width: 20vw;
+  aspect-ratio: 3/4;
+  border-radius: 1vw;
+}

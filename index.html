@@ -73,13 +73,16 @@
       <div class="vis_line">
         <video src="img/wave.mp4" autoplay muted loop playsinline></video>
       </div>
+      <div class="imgBox">
+        <img src="img/particle_demo.svg" />
+      </div>
+      <!-- <div class="lines"><hr /></div>
       <div class="lines"><hr /></div>
       <div class="lines"><hr /></div>
       <div class="lines"><hr /></div>
       <div class="lines"><hr /></div>
       <div class="lines"><hr /></div>
-      <div class="lines"><hr /></div>
-      <div class="lines"><hr /></div>
+      <div class="lines"><hr /></div> -->
       <div class="cc v1">
         <img src="img/colorcircle.svg" />
       </div>
@@ -118,15 +121,17 @@
         <h6>about me</h6>
         <div class="top">
           <div>
-            <h3>안녕하세요, 저는</h3>
-            <ul>
-              <li>#공감</li>
-              <li>#소통</li>
-              <li>#학습</li>
-              <li>
-                <span>#빌드업 아티스트</span>를 꿈꾸는 개발자 권가연입니다.
-              </li>
-            </ul>
+            <div class="intro">
+              <h3>안녕하세요, 저는</h3>
+              <ul>
+                <li>#공감</li>
+                <li>#소통</li>
+                <li>#학습</li>
+                <li>
+                  <span>#빌드업 아티스트</span>를 꿈꾸는 개발자 권가연입니다.
+                </li>
+              </ul>
+            </div>
             <div class="about">
               <div class="btn">
                 <div>About</div>
@@ -146,7 +151,7 @@
           </div>
           <div class="aboutMe">
             <div class="pic"></div>
-            <div>
+            <div class="bubble1">
               누구나 저마다의 예술을 선보일 수 있는 시대에서 사용자와 개발자
               모두가 즐기고 감상할 수 있는 웹사이트를 제작합니다.<br />
               편리하고 인상적인 UX/UI에 대해 늘 고민하면서 새롭게 접근하고,
@@ -168,7 +173,14 @@
                 <li><i class="fa-solid fa-xmark"></i></li>
               </ul>
               <div class="skill">
-                기본 HTML 태그와 CSS만으로 구성한 레이아웃 디자인이 가능합니다.
+                <div class="imgBox">
+                  <img src="img/logo_html.png" />
+                  <img src="img/logo_css.png" />
+                </div>
+                <p>
+                  기본 HTML 태그와 CSS만으로 구성한 레이아웃 디자인이
+                  가능합니다.
+                </p>
               </div>
             </li>
             <li>
@@ -178,7 +190,10 @@
                 <li><i class="fa-solid fa-xmark"></i></li>
               </ul>
               <div class="skill">
-                바닐라 자바스크립트를 이용한 간단한 프로그램 코딩이 가능합니다.
+                <div class="imgBox">
+                  <img src="img/logo_js.png" />
+                </div>
+                바닐라 자바스크립트를 이용한 프로그램 코딩이 가능합니다.
               </div>
             </li>
             <li>
@@ -188,6 +203,10 @@
                 <li><i class="fa-solid fa-xmark"></i></li>
               </ul>
               <div class="skill">
+                <div class="imgBox">
+                  <img src="img/logo_jq.png" />
+                  <img src="img/logo_gs.png" />
+                </div>
                 jQuery, GSAP 등 자바스크립트 플러그인을 이용한 다채로운 움직임을
                 구현할 수 있습니다.
               </div>
@@ -199,6 +218,9 @@
                 <li><i class="fa-solid fa-xmark"></i></li>
               </ul>
               <div class="skill">
+                <div class="imgBox">
+                  <img src="img/logo_fg.png" />
+                </div>
                 Figma를 통한 협업 디자인과 효율적인 피드백 교환이 가능합니다.
               </div>
             </li>
@@ -209,6 +231,10 @@
                 <li><i class="fa-solid fa-xmark"></i></li>
               </ul>
               <div class="skill">
+                <div class="imgBox">
+                  <img src="img/logo_ps.png" />
+                  <img src="img/logo_ai.png" />
+                </div>
                 Photoshop과 Illustrator 프로그램을 통해 직접 에셋을 제작할 수
                 있습니다.
               </div>
@@ -220,6 +246,10 @@
                 <li><i class="fa-solid fa-xmark"></i></li>
               </ul>
               <div class="skill">
+                <div class="imgBox">
+                  <img src="img/logo_pr.png" />
+                  <img src="img/logo_ae.png" />
+                </div>
                 Premiere Pro와 After Effect를 통해 영상물 제작 및 편집이
                 가능합니다.
               </div>
@@ -231,6 +261,9 @@
                 <li><i class="fa-solid fa-xmark"></i></li>
               </ul>
               <div class="skill">
+                <div class="imgBox">
+                  <img src="img/logo_fb.png" />
+                </div>
                 Firebase를 이용한 게시판 데이터베이스 기록 및 수집이 가능합니다.
               </div>
             </li>
@@ -273,7 +306,7 @@
               <hr />
             </li>
             <li>
-              <span class="time">2024. 12 ~ 2025. 12</span>
+              <span class="time">2024. 12 ~ 2025. 02</span>
               (주)디지털에볼루션 PR사업부 기간제 인턴 근무
               <hr />
             </li>
@@ -290,7 +323,7 @@
           </ul>
           <div class="github">
             <a href="#"
-              ><div></div>
+              ><div><i class="fa-brands fa-github"></i></div>
               View Github</a
             >
             <hr />
@@ -316,12 +349,12 @@
               <div>
                 <div class="left">
                   <ul class="prg">
-                    <li><img src="img/html_logo.png" /></li>
-                    <li><img src="img/css_logo.png" /></li>
-                    <li><img src="img/js_logo.png" /></li>
-                    <li><img src="img/ai_logo.png" /></li>
-                    <li><img src="img/cp_logo.png" /></li>
-                    <li><img src="img/fg_logo.png" /></li>
+                    <li><img src="img/logo_html.png" /></li>
+                    <li><img src="img/logo_css.png" /></li>
+                    <li><img src="img/logo_js.png" /></li>
+                    <li><img src="img/logo_ai.png" /></li>
+                    <li><img src="img/logo_cp.png" /></li>
+                    <li><img src="img/logo_fg.png" /></li>
                   </ul>
                   <p class="hashtag">
                     <span>#HTML5</span>
@@ -351,12 +384,12 @@
               <div>
                 <div class="left">
                   <ul class="prg">
-                    <li><img src="img/html_logo.png" /></li>
-                    <li><img src="img/css_logo.png" /></li>
-                    <li><img src="img/js_logo.png" /></li>
-                    <li><img src="img/ai_logo.png" /></li>
-                    <li><img src="img/cp_logo.png" /></li>
-                    <li><img src="img/fg_logo.png" /></li>
+                    <li><img src="img/logo_html.png" /></li>
+                    <li><img src="img/logo_css.png" /></li>
+                    <li><img src="img/logo_js.png" /></li>
+                    <li><img src="img/logo_ai.png" /></li>
+                    <li><img src="img/logo_cp.png" /></li>
+                    <li><img src="img/logo_fg.png" /></li>
                   </ul>
                   <p class="hashtag">
                     <span>#HTML5</span>
@@ -387,12 +420,12 @@
               <div>
                 <div class="left">
                   <ul class="prg">
-                    <li><img src="img/html_logo.png" /></li>
-                    <li><img src="img/css_logo.png" /></li>
-                    <li><img src="img/js_logo.png" /></li>
-                    <li><img src="img/ai_logo.png" /></li>
-                    <li><img src="img/cp_logo.png" /></li>
-                    <li><img src="img/fg_logo.png" /></li>
+                    <li><img src="img/logo_html.png" /></li>
+                    <li><img src="img/logo_css.png" /></li>
+                    <li><img src="img/logo_js.png" /></li>
+                    <li><img src="img/logo_ai.png" /></li>
+                    <li><img src="img/logo_cp.png" /></li>
+                    <li><img src="img/logo_fg.png" /></li>
                   </ul>
                   <p class="hashtag">
                     <span>#HTML5</span>
@@ -423,12 +456,12 @@
               <div>
                 <div class="left">
                   <ul class="prg">
-                    <li><img src="img/html_logo.png" /></li>
-                    <li><img src="img/css_logo.png" /></li>
-                    <li><img src="img/js_logo.png" /></li>
-                    <li><img src="img/ai_logo.png" /></li>
-                    <li><img src="img/cp_logo.png" /></li>
-                    <li><img src="img/fg_logo.png" /></li>
+                    <li><img src="img/logo_html.png" /></li>
+                    <li><img src="img/logo_css.png" /></li>
+                    <li><img src="img/logo_js.png" /></li>
+                    <li><img src="img/logo_ai.png" /></li>
+                    <li><img src="img/logo_cp.png" /></li>
+                    <li><img src="img/logo_fg.png" /></li>
                   </ul>
                   <p class="hashtag">
                     <span>#HTML5</span>
@@ -549,7 +582,8 @@
       <section class="con06">
         <h6>Sub<br />project</h6>
         <div class="click">
-          <i class="fa-regular fa-hand-pointer"></i> click
+          <i class="fa-regular fa-hand-pointer"></i>
+          <p>click</p>
         </div>
         <div class="clone">
           <ul>
@@ -578,75 +612,56 @@
       </section>
       <section class="con07">
         <h6>Sub<br />project</h6>
+        <h2>illustration & videos</h2>
+        <div class="modalBox">
+          <div class="modal">
+            <div class="close"><i class="fa-solid fa-xmark"></i></div>
+          </div>
+        </div>
+        <ul>
+          <li class="a">
+            <div class="imgBox"><img src="https://placehold.co/240x240" /></div>
+          </li>
+          <li class="b">
+            <div class="imgBox"><img src="https://placehold.co/240x240" /></div>
+          </li>
+          <li class="c">
+            <div class="imgBox"><img src="https://placehold.co/240x240" /></div>
+          </li>
+          <li class="a">
+            <div class="imgBox"><img src="https://placehold.co/240x240" /></div>
+          </li>
+          <li class="b">
+            <div class="imgBox"><img src="https://placehold.co/240x240" /></div>
+          </li>
+          <li class="c">
+            <div class="imgBox"><img src="https://placehold.co/240x240" /></div>
+          </li>
+          <li class="a">
+            <div class="imgBox"><img src="https://placehold.co/240x240" /></div>
+          </li>
+        </ul>
       </section>
       <section class="con08">
         <h6>contact</h6>
+        <div class="left">
+          <p>궁금하신 점이 있으신가요?</p>
+          <p>협업할 웹퍼블리셔를 탐색하고 계신가요?</p>
+          <div class="mail">
+            <i class="fa-regular fa-envelope"></i>
+            <div>
+              <span>karisk0209@gmail.com</span
+              ><a href="#"
+                ><i class="fa-regular fa-circle-right"></i>메일 전송하기</a
+              >
+            </div>
+          </div>
+          <p>언제든지 편히 연락 주시면 빠르게 회신드리겠습니다.</p>
+          <p>오늘도 방문해주셔서 감사합니다.</p>
+        </div>
+        <div class="right"></div>
       </section>
+      <script src="js/custom_gsap.js"></script>
     </div>
-    <script>
-      gsap.registerPlugin(ScrollTrigger);
-
-      let v1 = gsap.timeline();
-      v1.from(".vis_line", {
-        width: 0,
-        duration: 2,
-      })
-        .from("#visual h2 span", {
-          y: 50,
-          opacity: 0,
-          duration: 1.5,
-          stagger: 0.5,
-        })
-        .to(
-          "#visual h2 span:nth-child(1)",
-          {
-            x: "-25%",
-            duration: 1,
-          },
-          3.5
-        )
-        .to(
-          "#visual h2 span:nth-child(2)",
-          {
-            x: "23%",
-            duration: 1,
-          },
-          3.5
-        )
-        .to(
-          ".vis_line",
-          {
-            height: "400px",
-            duration: 1,
-          },
-          4.5
-        )
-        .to(
-          "#visual h2 span:nth-child(1)",
-          {
-            y: "-25vh",
-            duration: 1,
-          },
-          4.5
-        )
-        .to(
-          "#visual h2 span:nth-child(2)",
-          {
-            y: "25vh",
-            duration: 1,
-          },
-          4.5
-        );
-
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: "#visual",
-          start: "50% 50%",
-          end: "bottom top",
-          scrub: 2,
-          markers: true,
-        },
-      });
-    </script>
   </body>
 </html>
