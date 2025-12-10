@@ -170,6 +170,20 @@ hr {
 } */
 
 /* ------------particles------------ */
+/* #visual .shapes {
+  position: absolute;
+  top: 0;
+}
+#visual .shapes img {
+  width: 30px;
+  height: 30px;
+} */
+.particle {
+  pointer-events: none;
+  user-select: none;
+  z-index: -1;
+  max-width: 30px;
+}
 #visual .lines.a1 {
   position: absolute;
   bottom: 0;
@@ -196,7 +210,7 @@ hr {
 #visual .lines hr {
   width: 50vw;
   max-width: 700px;
-  height: 2px;
+  height: 1px;
 }
 #visual .lines li:nth-child(2) hr {
   margin: 20px auto 70px;

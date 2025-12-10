@@ -1,7 +1,45 @@
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
-
 let v1 = gsap.timeline();
+
+function createAnimatedParticles() {
+  let vis = document.querySelector("#visual");
+  let shapeFile = ["img/circle.svg", "img/triangle.svg", "img/star.svg"];
+
+  for (let i = 0; i < 15; i++) {
+    let particle = document.createElement("img");
+    particle.src = shapeFile[Math.floor(Math.random() * shapeFile.length)];
+    particle.className = "particle";
+
+    particle.style.position = "absolute";
+    particle.style.left = Math.random() * 100 + "%";
+    particle.style.top = Math.random() * 100 + "%";
+    particle.style.width = 20 + Math.random() * 40 + "px";
+    // particle.style.opacity = 0.3 + Math.random() * 0.5;
+
+    vis.appendChild(particle);
+
+    // 미묘한 떠다니는 효과
+    gsap.from(particle, { scale: 0, rotation: Math.random() * 360 }, 3.8);
+    gsap.to(
+      particle,
+      {
+        y: Math.random() * 30 - 15,
+        x: Math.random() * 30 - 15,
+        rotation: Math.random() * 720,
+        duration: 3 + Math.random() * 4,
+        scale: Math.random() * 1,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+      },
+      4
+    );
+  }
+}
+
+createAnimatedParticles();
+
 v1.fromTo(
   ".vis_line",
   { scaleX: 0, transformOrigin: "left center" },
@@ -80,7 +118,7 @@ gsap
       trigger: ".con02",
       start: "0% 0%",
       end: "bottom top",
-      // scrub: 1,
+      // scrub: 4,
       pin: true,
       markers: true,
     },
