@@ -31,6 +31,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/TextPlugin.min.js"
+      integrity="sha512-8BkFnMa5pqmphA7XoSbkjP2qX7Gqlkel2C+p1g1AH1tW4cBJs2tumC0Zn9eNRBOKbe3dW9OtbYh/vpkGuZNTMw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <!-- gsap end -->
     <link
       rel="stylesheet"
@@ -53,7 +59,7 @@
             <a href="#"
               ><div class="head_cir">
                 <video
-                  src="img/wave.mp4"
+                  src="img/tree.mp4"
                   autoplay
                   muted
                   loop
@@ -71,11 +77,29 @@
     <div id="visual">
       <h2><span>gayeon's</span><span>portfolio</span></h2>
       <div class="vis_line">
-        <video src="img/wave.mp4" autoplay muted loop playsinline></video>
+        <video src="img/tree.mp4" autoplay muted loop playsinline></video>
       </div>
       <div class="imgBox">
         <img src="img/particle_demo.svg" />
       </div>
+      <ul class="lines a1">
+        <li><hr /></li>
+        <li><hr /></li>
+        <li><hr /></li>
+        <li><hr /></li>
+        <li><hr /></li>
+        <li><hr /></li>
+        <li><hr /></li>
+      </ul>
+      <ul class="lines a2">
+        <li><hr /></li>
+        <li><hr /></li>
+        <li><hr /></li>
+        <li><hr /></li>
+        <li><hr /></li>
+        <li><hr /></li>
+        <li><hr /></li>
+      </ul>
       <!-- <div class="lines"><hr /></div>
       <div class="lines"><hr /></div>
       <div class="lines"><hr /></div>
@@ -150,7 +174,23 @@
             </div>
           </div>
           <div class="aboutMe">
-            <div class="pic"></div>
+            <ul class="decoplus a">
+              <li><img src="img/pluspattern.svg" /></li>
+              <li><img src="img/pluspattern.svg" /></li>
+              <li><img src="img/pluspattern.svg" /></li>
+              <li><img src="img/pluspattern.svg" /></li>
+              <li><img src="img/pluspattern.svg" /></li>
+            </ul>
+            <ul class="decoplus b">
+              <li><img src="img/pluspattern.svg" /></li>
+              <li><img src="img/pluspattern.svg" /></li>
+              <li><img src="img/pluspattern.svg" /></li>
+              <li><img src="img/pluspattern.svg" /></li>
+              <li><img src="img/pluspattern.svg" /></li>
+            </ul>
+            <div class="pic">
+              <img src="img/me_demo.png" />
+            </div>
             <div class="bubble1">
               누구나 저마다의 예술을 선보일 수 있는 시대에서 사용자와 개발자
               모두가 즐기고 감상할 수 있는 웹사이트를 제작합니다.<br />
@@ -165,7 +205,7 @@
             <div>Skills</div>
             <div></div>
           </div>
-          <ul>
+          <ul class="skillInfo">
             <li>
               <ul class="deco">
                 <li><i class="fa-regular fa-window-minimize"></i></li>
@@ -193,7 +233,8 @@
                 <div class="imgBox">
                   <img src="img/logo_js.png" />
                 </div>
-                바닐라 자바스크립트를 이용한 프로그램 코딩이 가능합니다.
+                바닐라 자바스크립트를 이용한 프로그램 코딩, api 불러오기가
+                가능합니다.
               </div>
             </li>
             <li>
@@ -267,18 +308,18 @@
                 Firebase를 이용한 게시판 데이터베이스 기록 및 수집이 가능합니다.
               </div>
             </li>
-            <li class="moveBar">
-              <ul>
-                <li class="on"></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-            </li>
           </ul>
+          <!-- <div class="moveBar">
+            <ul>
+              <li class="on"></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div> -->
         </div>
       </section>
       <section class="con02">
@@ -302,22 +343,22 @@
                 >2023. 12<br />고려대학교 세종교육혁신원 교수학습지원센터
                 개최</span
               >
-              스마트 APP 아이디어 공모전 대상
+              <p>스마트 APP 아이디어 공모전 대상</p>
               <hr />
             </li>
             <li>
               <span class="time">2024. 12 ~ 2025. 02</span>
-              (주)디지털에볼루션 PR사업부 기간제 인턴 근무
+              <p>(주)디지털에볼루션 PR사업부 기간제 인턴 근무</p>
               <hr />
             </li>
             <li>
               <span class="time">2025. 08</span>
-              고려대학교 세종캠퍼스 문화창의학부 문화콘텐츠전공 졸업
+              <p>고려대학교 세종캠퍼스 문화창의학부 문화콘텐츠전공 졸업</p>
               <hr />
             </li>
             <li>
               <span class="time">2025. 06 ~ 2025. 12</span>
-              MBC컴퓨터아카데미 웹퍼블리셔 교육과정 수료
+              <p>MBC컴퓨터아카데미 웹퍼블리셔 교육과정 수료</p>
               <hr />
             </li>
           </ul>
@@ -337,8 +378,10 @@
         <h6>main<br />project</h6>
         <div class="mainTime">
           <p>2025. 12~</p>
-          <div class="mainCirc"></div>
-          <hr />
+          <div>
+            <div class="mainCirc"></div>
+            <hr />
+          </div>
           <p>2026. ~</p>
         </div>
         <div class="java">
@@ -372,6 +415,14 @@
                     기본 htmlcss와 바닐라 자바스크립트를 이용한 코딩으로
                     플래시게임의 UI를 모방하여 간단한 숫자 게임을 구현했습니다.
                   </p>
+                  <div class="link">
+                    <a href="#"
+                      >바로가기<i class="fa-solid fa-chevron-right"></i
+                      ><i class="fa-solid fa-chevron-right"></i
+                      ><i class="fa-solid fa-chevron-right"></i
+                    ></a>
+                    <hr />
+                  </div>
                 </div>
                 <div class="right">
                   <img src="https://placehold.co/400x300" />
@@ -408,6 +459,14 @@
                     표기할 수 있는 기능이 담긴 투두 리스트 프로그램을
                     제작하였습니다.
                   </p>
+                  <div class="link">
+                    <a href="#"
+                      >바로가기<i class="fa-solid fa-chevron-right"></i
+                      ><i class="fa-solid fa-chevron-right"></i
+                      ><i class="fa-solid fa-chevron-right"></i
+                    ></a>
+                    <hr />
+                  </div>
                 </div>
                 <div class="right">
                   <img src="https://placehold.co/400x300" />
@@ -444,6 +503,14 @@
                     정보를 각지에서 불러올 수 있는 날씨 앱 기능을 하는
                     웹페이지를 구현하였습니다.
                   </p>
+                  <div class="link">
+                    <a href="#"
+                      >바로가기<i class="fa-solid fa-chevron-right"></i
+                      ><i class="fa-solid fa-chevron-right"></i
+                      ><i class="fa-solid fa-chevron-right"></i
+                    ></a>
+                    <hr />
+                  </div>
                 </div>
                 <div class="right">
                   <img src="https://placehold.co/400x300" />
@@ -480,6 +547,14 @@
                     사람들이 평가를 남긴 영화 등을 리스트 형태로 불러올 수 있는
                     웹페이지입니다.
                   </p>
+                  <div class="link">
+                    <a href="#"
+                      >바로가기<i class="fa-solid fa-chevron-right"></i
+                      ><i class="fa-solid fa-chevron-right"></i
+                      ><i class="fa-solid fa-chevron-right"></i
+                    ></a>
+                    <hr />
+                  </div>
                 </div>
                 <div class="right">
                   <img src="https://placehold.co/400x300" />
@@ -586,26 +661,26 @@
           <p>click</p>
         </div>
         <div class="clone">
-          <ul>
-            <li><img src="img/thePlatinum1.jpg" /></li>
-            <li class="on"><img src="img/thePlatinum2.jpg" /></li>
-            <li><img src="img/thePlatinum3.jpg" /></li>
+          <ul class="mus_thumb">
+            <li class="m1"><img src="img/thePlatinum1.jpg" /></li>
+            <li class="m2 on"><img src="img/thePlatinum2.jpg" /></li>
+            <li class="m3"><img src="img/thePlatinum3.jpg" /></li>
           </ul>
           <div class="music">
             <p>Now playing . . .</p>
             <h3>the platinum</h3>
             <div class="music_bar">
-              <p>00 : 00</p>
+              <p>0<span class="mus_num">0</span> : 00</p>
               <div>
                 <hr />
-                <div></div>
+                <div class="mus_cir"></div>
               </div>
               <p>03 : 00</p>
             </div>
             <ul>
-              <li><i class="fa-solid fa-backward-step"></i></li>
-              <li><i class="fa-solid fa-pause"></i></li>
-              <li><i class="fa-solid fa-forward-step"></i></li>
+              <li class="prev"><i class="fa-solid fa-backward-step"></i></li>
+              <li class="pause"><i class="fa-solid fa-pause"></i></li>
+              <li class="next"><i class="fa-solid fa-forward-step"></i></li>
             </ul>
           </div>
         </div>
@@ -650,7 +725,7 @@
           <div class="mail">
             <i class="fa-regular fa-envelope"></i>
             <div>
-              <span>karisk0209@gmail.com</span
+              <span></span
               ><a href="#"
                 ><i class="fa-regular fa-circle-right"></i>메일 전송하기</a
               >
@@ -659,7 +734,10 @@
           <p>언제든지 편히 연락 주시면 빠르게 회신드리겠습니다.</p>
           <p>오늘도 방문해주셔서 감사합니다.</p>
         </div>
-        <div class="right"></div>
+        <div class="right">
+          <img src="img/me_torso.png" />
+          <img src="img/me_arm.png" />
+        </div>
       </section>
       <script src="js/custom_gsap.js"></script>
     </div>

@@ -45,6 +45,7 @@ header ul {
 }
 header li {
   transition: 0.5s;
+  text-shadow: 0px 0px 4px #fff;
 }
 header li:hover {
   letter-spacing: 5px;
@@ -127,21 +128,38 @@ hr {
 }
 #visual .imgBox {
   position: absolute;
-  left: 30%;
-  bottom: -12%;
+  right: -20vw;
+  bottom: -5vh;
+  z-index: -1;
   /* transform: translate(20%, -50%); */
-  width: 10vw;
   height: 80vh;
-  /* height: 50%; */
-  /* overflow: hidden; */
+  overflow: hidden;
   width: 0;
+  opacity: 0.5;
+  align-content: end;
+  transform: rotate(-30deg);
+  animation: particle 3s ease-in-out infinite;
+
+  display: none;
+}
+@keyframes particle {
+  0% {
+    transform: rotate(-30deg) translate(0, 0);
+  }
+  50% {
+    transform: rotate(-30deg) translate(5vw, 5vw);
+  }
+  100% {
+    transform: rotate(-30deg) translate(0, 0);
+  }
 }
 #visual .imgBox img {
-  width: 100%;
-  height: 100%;
+  width: 80vw;
+  max-width: 900px;
+  transform: rotate(30deg);
 }
-#visual hr {
-  width: 60vw;
+/* #visual hr {
+  width: 10vw;
   max-width: 400px;
   height: 1px;
   background-color: #000;
@@ -149,11 +167,61 @@ hr {
   transform: rotate(30deg);
   border: none;
   border-radius: 10px;
-}
-/* .lines {
 } */
 
-#visual .lines:nth-child(3) {
+/* ------------particles------------ */
+#visual .lines.a1 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  transform: scale(0.9) rotate(30deg);
+}
+#visual .lines.a2 {
+  position: absolute;
+  top: 0;
+  left: -10vw;
+  z-index: -1;
+  transform: scale(0.9) rotate(30deg);
+}
+#visual .lines li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#visual .lines img {
+  width: 2vw;
+  height: 2vw;
+}
+#visual .lines hr {
+  width: 50vw;
+  max-width: 700px;
+  height: 2px;
+}
+#visual .lines li:nth-child(2) hr {
+  margin: 20px auto 70px;
+  width: 30%;
+}
+#visual .lines li:nth-child(3) hr {
+  margin: 10px auto;
+  width: 90%;
+}
+#visual .lines li:nth-child(4) hr {
+  margin: 50px auto 30px;
+  width: 130%;
+}
+#visual .lines li:nth-child(5) hr {
+  margin: 30px 0px 30px auto;
+  width: 80%;
+}
+#visual .lines li:nth-child(6) hr {
+  margin: 70px 30% 80px auto;
+  width: 20%;
+}
+
+/* ----------particles end---------- */
+
+/* #visual .lines:nth-child(3) {
   position: absolute;
   width: 30%;
   left: 90%;
@@ -192,7 +260,7 @@ hr {
   width: 20%;
   left: 5%;
   top: 50%;
-}
+} */
 #visual .cc {
   position: absolute;
   left: 0;
@@ -200,6 +268,7 @@ hr {
   width: 30vw;
   height: 30vw;
   z-index: -1;
+  display: none;
 }
 #visual .cc img {
   width: 100%;
@@ -238,6 +307,7 @@ hr {
   left: -20%;
   top: -10%;
 }
+
 #visual .prtc1 {
   position: absolute;
   left: 0;
@@ -427,6 +497,7 @@ h6 {
   padding: 20px 0px;
   width: 100%;
   word-break: keep-all;
+  overflow: hidden;
 }
 .con01 .about > ul::after {
   content: "";
@@ -441,6 +512,54 @@ h6 {
   display: flex;
   justify-content: space-between;
 }
+
+/* 우측 공간 */
+.con01 .aboutMe {
+  width: 100%;
+  margin-left: 5%;
+  position: relative;
+  padding: 40px;
+}
+.con01 .aboutMe .pic {
+  width: 20vw;
+  margin: -10px auto;
+  aspect-ratio: 2/1;
+  /* background-color: #ccc; */
+}
+.con01 .aboutMe .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.con01 .aboutMe .decoplus {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  width: 30%;
+  gap: 15%;
+  padding: 1vw 0 0 1.8vw;
+  user-select: none;
+  border-top: 2px solid #000;
+  border-left: 2px solid #000;
+}
+.con01 .aboutMe .decoplus li {
+  width: 20px;
+  height: 20px;
+}
+.con01 .aboutMe .decoplus li img {
+  width: 100%;
+  height: 100%;
+}
+.con01 .aboutMe .decoplus.a {
+  left: 0;
+  top: 0;
+}
+.con01 .aboutMe .decoplus.b {
+  right: 0;
+  bottom: 0;
+  transform: rotate(180deg);
+}
 /* 말풍선 */
 .con01 .aboutMe .bubble1 {
   position: relative;
@@ -450,12 +569,12 @@ h6 {
   background: #fffdf6;
   border-radius: 2vw;
   border: #000000 solid 2px;
-  z-index: -1;
+  z-index: 5;
 
   line-height: 1.5;
   word-break: keep-all;
   text-align: right;
-  font-size: calc(10px + 0.5vw);
+  font-size: calc(8px + 0.5vw);
 }
 .con01 .aboutMe .bubble1 span {
   opacity: 0.3;
@@ -469,7 +588,7 @@ h6 {
   border-color: #fffdf6 transparent;
   display: block;
   width: 0;
-  z-index: -1;
+  z-index: 4;
   margin-left: -10px;
   top: -20px;
   left: 21%;
@@ -483,7 +602,7 @@ h6 {
   border-color: #000000 transparent;
   display: block;
   width: 0;
-  z-index: -1;
+  z-index: 4;
   margin-left: -11px;
   top: -23px;
   left: 21%;
@@ -516,12 +635,12 @@ h6 {
   display: flex;
   align-items: flex-start;
   gap: 5vw;
+  position: relative;
 }
 .con01 .skills > ul {
   display: flex;
   gap: 1vw;
   height: 100px;
-  position: relative;
   font-size: 14px;
 }
 .con01 .skills > ul > li {
@@ -533,16 +652,18 @@ h6 {
 .con01 .skills .skill {
   box-sizing: border-box;
   padding: 10px;
-  height: 75px;
+  height: 71px;
   align-content: center;
   word-break: keep-all;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 5px;
 }
 .con01 .skills .skill .imgBox {
   display: flex;
   width: 100px;
+  justify-content: center;
 }
 .con01 .skills .skill .imgBox img {
   display: block;
@@ -572,9 +693,9 @@ h6 {
   display: block;
   font-size: 12px;
 }
-.con01 .skills .moveBar {
+/* .con01 .skills .moveBar {
   position: absolute;
-  left: 0;
+  left: 21vw;
   bottom: -20px;
   border: none;
   width: calc(62vw + 12px);
@@ -590,7 +711,7 @@ h6 {
 }
 .con01 .skills .moveBar ul li.on {
   background-color: orange;
-}
+} */
 
 /* con02 */
 .con02 {
@@ -679,8 +800,10 @@ h6 {
   /* align-content: center; */
   gap: 12vw;
   background-color: #ff880025;
+  overflow: hidden;
 }
 .con04 .mainTime {
+  z-index: 10;
   align-content: center;
 }
 .con04 .mainTime p {
@@ -688,8 +811,15 @@ h6 {
   font-weight: bold;
   margin: 20px 0px;
 }
+.con04 .mainTime > div {
+  height: 60vh;
+  position: relative;
+}
 .con04 .mainTime .mainCirc {
-  margin: -2px auto;
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  transform: translateX(-50%);
   width: 30px;
   height: 30px;
   border-radius: 100%;
@@ -709,6 +839,7 @@ h6 {
 }
 .con04 .java > ul {
   display: flex;
+  position: relative;
 }
 .con04 .java > ul > li {
   border-radius: 0 100px 0 100px;
@@ -721,6 +852,14 @@ h6 {
   max-width: 900px;
   flex-shrink: 0;
   height: 60vh;
+  background-color: #fffdf6;
+}
+.con04 .java > ul > li:nth-child(2),
+.con04 .java > ul > li:nth-child(3),
+.con04 .java > ul > li:nth-child(4) {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 .con04 .java > ul > li h3 {
   font-size: 32px;
@@ -757,6 +896,7 @@ h6 {
 
 .con04 .java > ul > li .left {
   width: 35%;
+  position: relative;
 }
 .con04 .java > ul > li .left .prg {
   display: flex;
@@ -789,6 +929,60 @@ h6 {
   font-size: 14px;
   word-break: keep-all;
   line-height: 1.5;
+}
+.con04 .java > ul > li .link {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transition: 0.3s;
+}
+.con04 .java > ul > li .link a {
+  display: block;
+  padding-bottom: 3px;
+  transition: 0.3s;
+}
+.con04 .java > ul > li .link hr {
+  height: 2px;
+  width: 0px;
+  transition: 0.5s;
+}
+.con04 .java > ul > li .link i {
+  margin-right: -12px;
+  font-size: 18px;
+  animation: link 1s ease-in-out infinite;
+}
+.con04 .java > ul > li .link a i:nth-child(1) {
+  animation-delay: 0;
+}
+.con04 .java > ul > li .link a i:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.con04 .java > ul > li .link a i:nth-child(3) {
+  animation-delay: 0.4s;
+}
+@keyframes link {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+.con04 .java > ul > li .link:hover {
+  font-weight: bold;
+  /* text-shadow: 0px 0px 2px #000; */
+  color: #000;
+  /* transform: translateX(10px); */
+}
+.con04 .java > ul > li .link:hover a {
+  margin-right: -15px;
+  padding-left: 10px;
+}
+.con04 .java > ul > li .link:hover hr {
+  width: 128%;
 }
 
 .con04 .java > ul > li .right {
@@ -903,6 +1097,23 @@ h6 {
   bottom: 20px;
   text-transform: uppercase;
   font-size: calc(10px + 0.5vw);
+  transition: 0.4s;
+  animation: viewer 1s ease-in-out infinite;
+}
+@keyframes viewer {
+  0% {
+    right: 15px;
+  }
+  50% {
+    right: 25px;
+  }
+  100% {
+    right: 15px;
+  }
+}
+.con05 .right li .view:hover {
+  font-weight: bold;
+  padding-bottom: 5px;
 }
 .con05 .right li .view a {
   display: block;
@@ -997,10 +1208,19 @@ h6 {
   border-radius: 100%;
   overflow: hidden;
   transform: scale(0.8);
+  position: relative;
+  left: 0;
+  top: 0;
+  transition: transform 0.5s, margin 0.5s, box-shadow 0.5s;
+  margin: 0px -20%;
+  box-shadow: 2px 2px 10px #00000070;
 }
 /* .on에 따른 조정 */
 .con06 .clone > ul li.on {
   transform: scale(1);
+  margin: 0px 5vw;
+  z-index: 5;
+  box-shadow: 0px 0px 16px #ffffff90;
 }
 .con06 .clone > ul li.on img {
   filter: none;
@@ -1010,7 +1230,22 @@ h6 {
   height: 100%;
   object-fit: cover;
   filter: blur(2px) brightness(60%) contrast(60%);
+  transition: filter 0.5s;
 }
+/* li 순서에 따른 조정 */
+/* .con06 .clone > ul li:nth-child(1),
+.con06 .clone > ul li:nth-child(3) {
+  margin: 0px -20%;
+  box-shadow: 2px 2px 10px #00000070;
+  transition: 0.5s;
+}
+.con06 .clone > ul li:nth-child(2) {
+  transition: 0.5s;
+  transform: scale(1);
+  margin: 0px 5vw;
+  z-index: 5;
+  box-shadow: 0px 0px 16px #ffffff90;
+} */
 
 .con06 .music {
   text-align: center;
@@ -1067,17 +1302,6 @@ h6 {
 /* ui */
 .con06 .music ul {
   font-size: calc(14px + 2vw);
-}
-/* li 순서에 따른 조정 */
-.con06 .clone > ul li:nth-child(1),
-.con06 .clone > ul li:nth-child(3) {
-  margin: 0px -20%;
-  box-shadow: 2px 2px 10px #00000070;
-}
-.con06 .clone > ul li:nth-child(2) {
-  margin: 0px 5vw;
-  z-index: 5;
-  box-shadow: 0px 0px 16px #ffffff90;
 }
 
 /* con07 */
@@ -1222,8 +1446,39 @@ h6 {
 }
 .con08 .right {
   width: 20%;
-  border: 1px solid #000;
+  border: 3px solid #000;
   width: 20vw;
   aspect-ratio: 3/4;
   border-radius: 1vw;
+  position: relative;
+  z-index: 10;
 }
+.con08 .right img:nth-child(1) {
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30vw;
+  user-select: none;
+}
+.con08 .right img:nth-child(2) {
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30vw;
+  user-select: none;
+  /* animation: arm 2s ease-in-out infinite;
+  animation-delay: 3.5s; */
+}
+/* @keyframes arm {
+  0% {
+    transform: translateX(-50%) rotate(5deg);
+  }
+  50% {
+    transform: translateX(-50%) rotate(-5deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(5deg);
+  }
+} */
