@@ -240,12 +240,12 @@ gsap
   .from(".mail i", { opacity: 0 })
   .to(".mail span", { duration: 1.5, text: result1 }, 1.5)
   .from(
-    ".right img:nth-child(1)",
+    ".con08 .right img:nth-child(1)",
     { duration: 1.5, scale: 0, rotation: -135 },
     1.5
   )
   .from(
-    ".right img:nth-child(2)",
+    ".con08 .right img:nth-child(2)",
     { duration: 1.5, scale: 0.8, opacity: 0, rotation: -90 },
     2.7
   )
