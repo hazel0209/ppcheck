@@ -238,7 +238,7 @@ hr {
   position: absolute;
   z-index: -2;
   aspect-ratio: 1/1;
-  min-width: 200px;
+  opacity: 0;
 }
 #visual .cc.a {
   left: -10%;
@@ -246,24 +246,27 @@ hr {
   width: 40vw;
 }
 #visual .cc.b {
-  left: 10%;
+  left: 20%;
   bottom: 10%;
   width: 15vw;
+  min-width: 200px;
 }
-/* #visual .cc.c {
-  left: -10%;
-  bottom: -18%;
-  width: 40vw;
+#visual .cc.c {
+  left: 60%;
+  bottom: 30%;
+  width: 20vw;
 }
 #visual .cc.d {
-  left: -10%;
-  bottom: -18%;
-  width: 40vw;
-} */
+  left: 70%;
+  top: 10%;
+  width: 5vw;
+  min-width: 100px;
+}
 #visual .cc.e {
-  right: -5%;
-  bottom: -8%;
-  width: 10vw;
+  right: -3%;
+  bottom: 2%;
+  width: 30vw;
+  min-width: 250px;
 }
 
 /* ----------particles end---------- */
@@ -779,7 +782,6 @@ h6 {
   font-size: 60px;
 }
 
-/* con03 */
 /* con03 */
 .con03 {
   display: flex;

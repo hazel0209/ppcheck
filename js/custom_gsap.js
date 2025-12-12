@@ -55,12 +55,37 @@ v1.fromTo(
   { scaleX: 0, transformOrigin: "left center" },
   { scaleX: 1, transformOrigin: "left center", duration: 1.5 }
 )
-  .from("#visual h2 span", {
-    y: 50,
-    opacity: 0,
-    duration: 1.5,
-    stagger: 0.5,
-  })
+  .to(
+    "#visual .cc",
+    {
+      opacity: 0.5,
+      scale: 1.2,
+      ease: "sine.inOut",
+    },
+    1.5
+  )
+  .to(
+    "#visual .cc",
+    {
+      rotation: Math.random() * 720,
+      duration: 3 + Math.random() * 4,
+      scale: 1.2,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
+    },
+    1.5
+  )
+  .from(
+    "#visual h2 span",
+    {
+      y: 50,
+      opacity: 0,
+      duration: 1.5,
+      stagger: 0.5,
+    },
+    2
+  )
   .to(
     "#visual h2 span:nth-child(1)",
     {
