@@ -183,6 +183,7 @@ hr {
   user-select: none;
   z-index: -1;
   max-width: 30px;
+  opacity: 0.4;
 }
 #visual .lines.a1 {
   position: absolute;
@@ -233,105 +234,39 @@ hr {
   width: 20%;
 }
 
-/* ----------particles end---------- */
-
-/* #visual .lines:nth-child(3) {
-  position: absolute;
-  width: 30%;
-  left: 90%;
-  bottom: 50%;
-}
-#visual .lines:nth-child(4) {
-  width: 40%;
-  position: absolute;
-  left: -10%;
-  bottom: 25%;
-}
-#visual .lines:nth-child(5) {
-  position: absolute;
-  left: -10%;
-  bottom: 70%;
-}
-#visual .lines:nth-child(6) {
-  position: absolute;
-  left: 70%;
-  top: 50%;
-}
-#visual .lines:nth-child(7) {
-  position: absolute;
-  width: 50%;
-  left: -10%;
-  bottom: 35%;
-}
-#visual .lines:nth-child(8) {
-  position: absolute;
-  width: 15%;
-  left: 80%;
-  top: 32%;
-}
-#visual .lines:nth-child(9) {
-  position: absolute;
-  width: 20%;
-  left: 5%;
-  top: 50%;
-} */
 #visual .cc {
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 30vw;
-  height: 30vw;
-  z-index: -1;
-  display: none;
+  z-index: -2;
+  aspect-ratio: 1/1;
+  min-width: 200px;
 }
-#visual .cc img {
-  width: 100%;
-  height: 100%;
+#visual .cc.a {
+  left: -10%;
+  top: -18%;
+  width: 40vw;
 }
-#visual .cc.v1 {
-  position: absolute;
-  left: -20%;
-  bottom: 0;
+#visual .cc.b {
+  left: 10%;
+  bottom: 10%;
+  width: 15vw;
 }
-#visual .cc1.v2 {
-  width: 30vw;
-  height: 30vw;
-  position: absolute;
-  left: -20%;
-  top: -10%;
+/* #visual .cc.c {
+  left: -10%;
+  bottom: -18%;
+  width: 40vw;
 }
-#visual .cc1.v3 {
-  width: 30vw;
-  height: 30vw;
-  position: absolute;
-  left: -20%;
-  top: -10%;
-}
-#visual .cc1.v4 {
-  width: 30vw;
-  height: 30vw;
-  position: absolute;
-  left: -20%;
-  top: -10%;
-}
-#visual .cc1.v5 {
-  width: 30vw;
-  height: 30vw;
-  position: absolute;
-  left: -20%;
-  top: -10%;
+#visual .cc.d {
+  left: -10%;
+  bottom: -18%;
+  width: 40vw;
+} */
+#visual .cc.e {
+  right: -5%;
+  bottom: -8%;
+  width: 10vw;
 }
 
-#visual .prtc1 {
-  position: absolute;
-  left: 0;
-  top: 0;
-  display: none;
-}
-#visual .prtc1 img {
-  width: 5vw;
-  height: 5vw;
-}
+/* ----------particles end---------- */
 
 /* fixed frame */
 h1 {
@@ -339,6 +274,7 @@ h1 {
   left: calc(100px + 3vw);
   top: 0;
   width: 40px;
+  max-width: 200px;
   z-index: 1000;
 }
 h1 hr {
@@ -349,6 +285,30 @@ h1 hr {
 }
 h1 a {
   display: block;
+}
+h1 .mode {
+  cursor: pointer;
+  font-size: 1.5rem;
+  width: 100px;
+  text-align: center;
+  margin: 2vh auto 0px;
+  font-weight: normal;
+  display: none;
+  animation: moding 1.5s ease-in-out infinite;
+}
+@keyframes moding {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+h1 .mode i {
+  margin-right: 6px;
 }
 
 #ppFrame div:nth-child(2) {
@@ -530,15 +490,27 @@ h6 {
 /* 우측 공간 */
 .con01 .aboutMe {
   width: 100%;
+  height: 50vh;
   margin-left: 5%;
   position: relative;
   padding: 40px;
+  align-content: center;
 }
 .con01 .aboutMe .pic {
   width: 20vw;
   margin: -10px auto;
   aspect-ratio: 2/1;
   /* background-color: #ccc; */
+  position: relative;
+  filter: brightness(70%);
+}
+.con01 .aboutMe .pic p {
+  font-weight: bold;
+  font-size: 30px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .con01 .aboutMe .pic img {
   width: 100%;
@@ -588,7 +560,7 @@ h6 {
   line-height: 1.5;
   word-break: keep-all;
   text-align: right;
-  font-size: calc(8px + 0.5vw);
+  font-size: 15px;
 }
 .con01 .aboutMe .bubble1 span {
   opacity: 0.3;
@@ -771,6 +743,9 @@ h6 {
   align-items: center;
   gap: calc(70vh / 3 - 55px);
 }
+.con02 .timeline ul li p {
+  font-weight: bold;
+}
 .con02 .timeline ul hr {
   height: 2px;
   margin-top: 6px;
@@ -805,6 +780,29 @@ h6 {
 }
 
 /* con03 */
+/* con03 */
+.con03 {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  align-content: center;
+  gap: 10%;
+  padding: 0px 100px;
+  box-sizing: border-box;
+}
+.con03 .logobox {
+  width: 20%;
+  align-content: start;
+}
+.con03 .logobox img {
+  width: 100%;
+}
+.con03 .idea {
+  width: 40%;
+}
+.con03 .idea h3 {
+  font-size: 3vw;
+}
 
 /* con04 */
 .con04 {
@@ -1270,19 +1268,27 @@ h6 {
   margin: 20px 0px;
   letter-spacing: -1px;
 }
-.con06 .music > h3 {
+.con06 .music h3 {
   font-size: 4vw;
   text-transform: capitalize;
-  line-height: 0.7;
+  line-height: 1;
   letter-spacing: -0.3vw;
 }
+.con06 .music .mus_title {
+  height: 4.5vw;
+  overflow: hidden;
+}
+.con06 .music .mus_title li {
+  height: 4.5vw;
+  align-content: center;
+}
 .con06 .music .music_bar,
-.con06 .music ul {
+.con06 .music .music_bar + ul {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.con06 .music ul {
+.con06 .music .music_bar + ul {
   gap: 5vw;
 }
 .con06 .music .music_bar {
@@ -1314,7 +1320,7 @@ h6 {
   height: 3px;
 }
 /* ui */
-.con06 .music ul {
+.con06 .music .music_bar + ul {
   font-size: calc(14px + 2vw);
 }
 

@@ -6,7 +6,7 @@ function createAnimatedParticles() {
   let vis = document.querySelector("#visual");
   let shapeFile = ["img/circle.svg", "img/triangle.svg", "img/star.svg"];
 
-  for (let i = 0; i < 15; i++) {
+  for (let i = 0; i < 20; i++) {
     let particle = document.createElement("img");
     particle.src = shapeFile[Math.floor(Math.random() * shapeFile.length)];
     particle.className = "particle";
@@ -20,7 +20,17 @@ function createAnimatedParticles() {
     vis.appendChild(particle);
 
     // 미묘한 떠다니는 효과
-    gsap.from(particle, { scale: 0, rotation: Math.random() * 360 }, 3.8);
+    gsap.from(
+      particle,
+      {
+        scale: 0.8,
+        y: 20,
+        duration: 0.6,
+        opacity: 0,
+        rotation: Math.random() * 360,
+      },
+      2
+    );
     gsap.to(
       particle,
       {
@@ -28,12 +38,12 @@ function createAnimatedParticles() {
         x: Math.random() * 30 - 15,
         rotation: Math.random() * 720,
         duration: 3 + Math.random() * 4,
-        scale: Math.random() * 1,
+        scale: Math.random() * 2,
         repeat: -1,
         yoyo: true,
         ease: "sine.inOut",
       },
-      4
+      2
     );
   }
 }
@@ -115,6 +125,40 @@ v1.fromTo(
 gsap
   .timeline({
     scrollTrigger: {
+      trigger: ".con01",
+      start: "0% 0%",
+      end: "bottom top",
+      // scrub: 3,
+      pin: true,
+      markers: true,
+    },
+  })
+  .from(".intro h3", { opacity: 0, y: -40, duration: 1.2 })
+  .from(".intro li", { opacity: 0, y: -40, stagger: 0.4 })
+  .from(".about .btn div", { scale: 0, stagger: 0.2 }, 3)
+  .from(".about ul", { height: 0, opacity: 0 }, 3.5)
+  .from(".about li", { scale: 0, stagger: 0.2 }, 3.5)
+  .from(".aboutMe", { scale: 0 }, 3.8)
+  .from(".aboutMe .decoplus", { opacity: 0, scale: 2 }, 4)
+  .from(".aboutMe .decoplus.a li", { x: 100, scale: 0, stagger: 0.2 }, 4)
+  .from(".aboutMe .decoplus.b li", { x: 100, scale: 0, stagger: 0.2 }, 4)
+  .to(".aboutMe .decoplus li", {
+    scale: 1.4,
+    rotation: 180,
+    stagger: 0.6,
+    repeat: -1,
+    ease: "power4.out",
+    duration: 1,
+    yoyo: true,
+  })
+  .from(".aboutMe .pic", { opacity: 0, y: -50 }, 4)
+  .from(".aboutMe .bubble1", { scale: 0 }, 4.5)
+  .from(".skills .btn div", { scale: 0, stagger: 0.2 }, 3.5)
+  .from(".skillInfo li", { scale: 0, stagger: 0.2 }, 4);
+
+gsap
+  .timeline({
+    scrollTrigger: {
       trigger: ".con02",
       start: "0% 0%",
       end: "bottom top",
@@ -130,6 +174,18 @@ gsap
   .from(".timeline li p", { opacity: 0, y: -20, stagger: 0.5 }, 2)
   .from(".github hr", { width: 0 })
   .from(".github a", { opacity: 0, y: -40 });
+
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".con03",
+    start: "0% 0%",
+    end: "bottom top",
+    scrub: 4,
+    pin: true,
+    markers: true,
+  },
+});
+//   .to("h1", { transform: "scale(1.5)" });
 
 let java = gsap.utils.toArray(".java > ul > li");
 let picsub = gsap.utils.toArray(".con07 ul li");
@@ -279,14 +335,14 @@ gsap
   .to(".mail span", { duration: 1.5, text: result1 }, 1.5)
   .from(
     ".con08 .right img:nth-child(1)",
-    { duration: 1.5, scale: 0, rotation: -135 },
+    { duration: 1, scale: 0, rotation: -135 },
     1.5
   )
   .from(
     ".con08 .right img:nth-child(2)",
-    { duration: 1.5, scale: 0.8, opacity: 0, rotation: -90 },
-    2.7
+    { duration: 1, scale: 0.8, opacity: 0, rotation: -90 },
+    2
   )
-  .fromTo(".mail a", { y: 15, opacity: 0 }, { y: 0, opacity: 1 })
+  .fromTo(".mail a", { opacity: 0 }, { opacity: 1 })
   .from(".mail + p", { y: -50, opacity: 0, delay: 0.8 })
   .from(".mail + p + p", { y: -50, opacity: 0 });

@@ -10,6 +10,25 @@ $(function () {
   //     });
   //   }, 2000);
 
+  $(window).on("scroll", function () {
+    let scheight = $(this).scrollTop();
+    let logoTop = $(".con03").offset().top - 200;
+    // console.log("현재높이", scheight);
+    // console.log("con03시작", logoTop);
+    let logoBottom = $(".con03").offset().top + $(".con03").outerHeight() - 500;
+    // console.log("con03끝", logoBottom);
+
+    if (scheight >= logoTop && scheight <= logoBottom) {
+      $("h1").stop().animate({ width: "20%" }, 700);
+      $("h1 hr").stop().animate({ height: "100px" }, 700);
+      $("h1 .mode").fadeIn();
+    } else {
+      $("h1").stop().animate({ width: "40px" }, 300);
+      $("h1 hr").stop().animate({ height: "50px" }, 100);
+      $("h1 .mode").fadeOut();
+    }
+  });
+
   let i = 0;
   let musicminute = document.querySelector(".mus_num");
 
@@ -20,7 +39,7 @@ $(function () {
       i++;
     }
 
-    $(".mus_thumb").animate({ left: "-30vw" }, 2000, function () {
+    $(".mus_thumb").animate({ left: "-30vw" }, 1000, function () {
       $(".mus_thumb > li:first-child").appendTo(".mus_thumb");
       $(".mus_thumb").css({ left: "0" });
 
@@ -28,6 +47,11 @@ $(function () {
       $(".mus_thumb > li:nth-child(2)").addClass("on");
       musicminute.textContent = `${i}`;
       $(".mus_cir").animate({ left: `${32 * i}%` });
+    });
+
+    $(".mus_title ul").animate({ "margin-top": "-4.5vw" }, 1000, function () {
+      $(".mus_title ul").find("li:first-child").appendTo(".mus_title ul");
+      $(".mus_title ul").css({ "margin-top": 0 });
     });
   }, 3000);
 
