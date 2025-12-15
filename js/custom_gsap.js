@@ -155,7 +155,7 @@ gsap
       end: "bottom top",
       // scrub: 3,
       pin: true,
-      markers: true,
+      // markers: true,
     },
   })
   .from(".intro h3", { opacity: 0, y: -40, duration: 1.2 })
@@ -189,7 +189,7 @@ gsap
       end: "bottom top",
       // scrub: 4,
       pin: true,
-      markers: true,
+      // markers: true,
     },
   })
   .from(".timeBar li", { height: 0, stagger: 0.2 }, 0.6)
@@ -200,17 +200,91 @@ gsap
   .from(".github hr", { width: 0 })
   .from(".github a", { opacity: 0, y: -40 });
 
-gsap.timeline({
-  scrollTrigger: {
-    trigger: ".con03",
-    start: "0% 0%",
-    end: "bottom top",
-    scrub: 4,
-    pin: true,
-    markers: true,
-  },
-});
-//   .to("h1", { transform: "scale(1.5)" });
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: ".con03",
+      start: "0% 0%",
+      end: "bottom top",
+      // scrub: 4,
+      pin: true,
+      // markers: true,
+    },
+  })
+  .to(
+    ".con03 .cc.a",
+    {
+      // y: Math.random() * 1,
+      // x: Math.random() * 1,
+      rotation: Math.random() * 360,
+      duration: 3 + Math.random() * 4,
+      scale: 1.1,
+      repeat: -1,
+      opacity: 0.3,
+      yoyo: true,
+      ease: "sine.inOut",
+    },
+    2
+  )
+  .to(
+    ".con03 .cc.b",
+    {
+      y: Math.random() * 1,
+      x: Math.random() * 1,
+      rotation: Math.random() * 360,
+      duration: 3 + Math.random() * 4,
+      scale: 1.1,
+      repeat: -1,
+      opacity: 0.5,
+      yoyo: true,
+      ease: "sine.inOut",
+    },
+    2
+  )
+  .to(
+    ".con03 .cc.c",
+    {
+      y: Math.random() * 1,
+      x: Math.random() * 1,
+      rotation: Math.random() * 360,
+      duration: 3 + Math.random() * 4,
+      scale: 1.1,
+      repeat: -1,
+      opacity: 0.4,
+      yoyo: true,
+      ease: "sine.inOut",
+    },
+    2
+  )
+  .to(
+    ".con03 .cc.d",
+    {
+      y: Math.random() * 1,
+      x: Math.random() * 1,
+      rotation: Math.random() * 360,
+      duration: 3 + Math.random() * 4,
+      scale: 1.1,
+      repeat: -1,
+      opacity: 0.3,
+      yoyo: true,
+      ease: "sine.inOut",
+    },
+    2
+  )
+  .to(
+    ".con03 .cc.e",
+    {
+      y: Math.random() * 1,
+      x: Math.random() * 1,
+      rotation: Math.random() * 360,
+      duration: 3 + Math.random() * 4,
+      scale: 1.1,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
+    },
+    2
+  );
 
 let java = gsap.utils.toArray(".java > ul > li");
 let picsub = gsap.utils.toArray(".con07 ul li");
@@ -244,7 +318,7 @@ gsap
       end: "+=200%",
       scrub: 2,
       pin: true,
-      markers: true,
+      // markers: true,
     },
   })
   .fromTo(
@@ -310,7 +384,7 @@ gsap.to(picsub, {
     end: "+=200%",
     scrub: 3,
     pin: true,
-    markers: true,
+    // markers: true,
   },
 });
 gsap.to(sub1, {
@@ -348,7 +422,7 @@ gsap
       end: "bottom bottom",
       // scrub: 2,
       pin: true,
-      markers: true,
+      // markers: true,
     },
   })
   .from(".con08 .left > p:nth-child(1)", { y: -50, opacity: 0 })

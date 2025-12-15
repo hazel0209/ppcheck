@@ -33,6 +33,8 @@ $(function () {
   let clickTime = 0;
   $("h1").on("click", function () {
     let body = document.querySelector("body");
+    let logo = document.querySelector("h1 img");
+    let logoHor = document.querySelector(".logobox img");
     clickTime++;
     console.log(clickTime);
 
@@ -42,12 +44,19 @@ $(function () {
         "background-color": "#fffdf6",
         color: "#000",
       });
+      logo.src = "img/logo.svg";
+      logoHor.src = "img/logo_horizontal.svg";
+      $(".con03 .cc").fadeOut(800);
+      // $(".con03 .cc").css({})
     } else {
       $(body).css({
         transition: "1s",
         "background-color": "#333",
         color: "#fff",
       });
+      logo.src = "img/logo_dark.svg";
+      logoHor.src = "img/logo_dark_horizontal.svg";
+      $(".con03 .cc").fadeIn(800);
     }
   });
 
@@ -61,20 +70,12 @@ $(function () {
       i++;
     }
 
-    // $(".mus_thumb")
-    //   .stop()
-    //   .animate({ left: "-30vw" }, 1000, function () {
-    //     $(".mus_thumb > li:first-child").stop().animate({ opacity: 0 });
-    //     $(".mus_thumb > li:first-child").appendTo(".mus_thumb");
-    //     $(".mus_thumb > li:last-child").stop().animate({ opacity: 1 });
-    //     // $(".mus_thumb").css({ left: "0" });
-    //   });
-
     $(".mus_thumb > li:first-child").stop().animate({ opacity: 0 });
     $(".mus_thumb > li:first-child").appendTo(".mus_thumb");
     $(".mus_thumb > li:last-child").stop().animate({ opacity: 1 });
     $(".mus_thumb > li").removeClass("on");
     $(".mus_thumb > li:nth-child(2)").addClass("on");
+
     musicminute.textContent = `${i + 1}`;
     $(".mus_cir").animate({ left: `${32 + 32 * i}%` });
 
@@ -83,34 +84,6 @@ $(function () {
       $(".mus_title ul").css({ "margin-top": 0 });
     });
   }, 3000);
-
-  // let stop = setInterval(() => {
-  //   if (i > 2) {
-  //     i = 0;
-  //   } else {
-  //     i++;
-  //   }
-  //   musicminute.textContent = `${i}`;
-
-  //   $(".mus_thumb").css({
-  //     transform: "translateX(-30vw)",
-  //     transition: "transform 1s ease",
-  //   });
-
-  //   // 1초 후 실행 (transition 시간과 맞춤)
-  //   setTimeout(() => {
-  //     $(".mus_thumb > li:first-child").appendTo(".mus_thumb");
-  //     $(".mus_thumb").css({
-  //       transform: "translateX(0)",
-  //       transition: "",
-  //     });
-
-  //     // .on 클래스 이동
-  //     $(".mus_thumb > li").removeClass("on");
-  //     $(".mus_thumb > li:nth-child(2)").addClass("on");
-  //     $(".mus_cir").animate({ left: `${32 * i}%` });
-  //   }, 1000);
-  // }, 3000);
 
   //이건 당장은 필요없음
   // $(".pause").on("click", function () {
@@ -159,6 +132,7 @@ $(function () {
     }
 
     $(".modalBox").fadeIn();
+    $(".modalBox").css({ position: "fixed" });
   });
   $(".close").on("click", function () {
     $(".modalBox").fadeOut();
