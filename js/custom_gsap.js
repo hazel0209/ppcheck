@@ -176,8 +176,8 @@ gsap
     duration: 1,
     yoyo: true,
   })
-  .from(".aboutMe .pic", { opacity: 0, y: -50 }, 4)
-  .from(".aboutMe .bubble1", { scale: 0 }, 4.5)
+  .from(".aboutMe .pic", { opacity: 0 }, 4.5)
+  .from(".aboutMe .bubble1", { scale: 0 }, 4)
   .from(".skills .btn div", { scale: 0, stagger: 0.2 }, 3.5)
   .from(".skillInfo li", { scale: 0, stagger: 0.2 }, 4);
 
